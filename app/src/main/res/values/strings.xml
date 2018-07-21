@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WhatIsThisThing</string>
+    <string name="logos">Logos</string>
+    <string name="landmarks">Landmarks</string>
+    <string name="things">Things</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

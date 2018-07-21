@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:background="#0099cc"
+    tools:context="com.uname.whatisthisthing.Main">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextureView
+            android:id="@+id/fullscreen_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:keepScreenOn="true"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/blackBackground"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"/>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btnID"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        fancy:fb_borderColor="#99FFFFFF"
+        fancy:fb_borderWidth="2dp"
+        fancy:fb_defaultColor="#be3e3e3e"
+        fancy:fb_focusColor="#c1c1c1"
+        fancy:fb_radius="100dp"
+        fancy:fb_text=""
+        fancy:fb_textColor="#FFFFFF" />
+
+    <android.widget.Button
+        android:id="@+id/thingsBtnID"
+        android:visibility="visible"
+        android:layout_height="34dp"
+        android:layout_width="34dp"
+        android:background="@drawable/ic_all_inclusive_black_24dp"
+        android:backgroundTint="#AAFFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+
+        />
+
+    <android.widget.Button
+        android:id="@+id/logosBtnID"
+        android:visibility="invisible"
+        android:layout_height="34dp"
+        android:layout_width="34dp"
+        android:background="@drawable/ic_toys_black_24dp"
+        android:backgroundTint="#AAFFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+
+        />
+
+    <android.widget.Button
+        android:id="@+id/landmarksBtnID"
+        android:visibility="invisible"
+        android:layout_height="34dp"
+        android:layout_width="34dp"
+        android:background="@drawable/ic_nature_black_24dp"
+        android:backgroundTint="#AAFFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+
+        />
+
+    <TextView
+        android:id="@+id/notificationTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text=""
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/infoTitleID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text=""
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="110dp"
+        android:id="@+id/scrollView2">
+        <TextView
+            android:id="@+id/infoContentID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"/>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/progressID"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/permissionsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/infoTitleID"
+        android:layout_centerHorizontal="true"
+        android:padding="30px"
+        android:paddingBottom="30px"
+        android:paddingEnd="30px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingStart="30px"
+        android:paddingTop="30px"
+        android:text="This application needs access to the device's camera and internet connection in order to process your images. Please allow these permissions to use the application. If you have already provided these permissions click anywhere to continue, if not please restart the application to provide the permissions."
+        android:textAlignment="viewStart"
+        android:textSize="18sp" />
+
+</RelativeLayout>
